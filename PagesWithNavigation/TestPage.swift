@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TestPage.swift
 //  PagesWithNavigation
 //
 //  Created by Dan Kinney on 10/31/19.
@@ -8,16 +8,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TestPage: View {
     var body: some View {
-        NavigationView {
-            TestNavigation()
+        VStack {
+            TestHeader()
+            TestList()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TestPage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TestPage()
     }
 }

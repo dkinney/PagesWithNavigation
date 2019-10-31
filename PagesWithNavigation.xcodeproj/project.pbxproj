@@ -13,6 +13,11 @@
 		3AEF3697236B725000F42D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF3696236B725000F42D03 /* Assets.xcassets */; };
 		3AEF369A236B725000F42D03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF3699236B725000F42D03 /* Preview Assets.xcassets */; };
 		3AEF369D236B725000F42D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF369B236B725000F42D03 /* LaunchScreen.storyboard */; };
+		3AEF36A8236B727700F42D03 /* TestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF36A4236B727600F42D03 /* TestList.swift */; };
+		3AEF36A9236B727700F42D03 /* TestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF36A5236B727600F42D03 /* TestHeader.swift */; };
+		3AEF36AA236B727700F42D03 /* TestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF36A6236B727600F42D03 /* TestNavigation.swift */; };
+		3AEF36AB236B727700F42D03 /* TestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF36A7236B727700F42D03 /* TestPage.swift */; };
+		3AEF36AD236B728600F42D03 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF36AC236B728600F42D03 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3AEF3699236B725000F42D03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AEF369C236B725000F42D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AEF369E236B725000F42D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AEF36A4236B727600F42D03 /* TestList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestList.swift; sourceTree = "<group>"; };
+		3AEF36A5236B727600F42D03 /* TestHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHeader.swift; sourceTree = "<group>"; };
+		3AEF36A6236B727600F42D03 /* TestNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavigation.swift; sourceTree = "<group>"; };
+		3AEF36A7236B727700F42D03 /* TestPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPage.swift; sourceTree = "<group>"; };
+		3AEF36AC236B728600F42D03 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,14 @@
 		3AEF368F236B724E00F42D03 /* PagesWithNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				3AEF36AC236B728600F42D03 /* PageViewController.swift */,
 				3AEF3690236B724E00F42D03 /* AppDelegate.swift */,
 				3AEF3692236B724E00F42D03 /* SceneDelegate.swift */,
 				3AEF3694236B724E00F42D03 /* ContentView.swift */,
+				3AEF36A6236B727600F42D03 /* TestNavigation.swift */,
+				3AEF36A7236B727700F42D03 /* TestPage.swift */,
+				3AEF36A5236B727600F42D03 /* TestHeader.swift */,
+				3AEF36A4236B727600F42D03 /* TestList.swift */,
 				3AEF3696236B725000F42D03 /* Assets.xcassets */,
 				3AEF369B236B725000F42D03 /* LaunchScreen.storyboard */,
 				3AEF369E236B725000F42D03 /* Info.plist */,
@@ -147,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEF3691236B724E00F42D03 /* AppDelegate.swift in Sources */,
+				3AEF36A9236B727700F42D03 /* TestHeader.swift in Sources */,
+				3AEF36A8236B727700F42D03 /* TestList.swift in Sources */,
 				3AEF3693236B724E00F42D03 /* SceneDelegate.swift in Sources */,
+				3AEF36AB236B727700F42D03 /* TestPage.swift in Sources */,
 				3AEF3695236B724E00F42D03 /* ContentView.swift in Sources */,
+				3AEF36AA236B727700F42D03 /* TestNavigation.swift in Sources */,
+				3AEF36AD236B728600F42D03 /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +309,7 @@
 				DEVELOPMENT_TEAM = HH5JDF97VZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PagesWithNavigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.metiax.PagesWithNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +330,7 @@
 				DEVELOPMENT_TEAM = HH5JDF97VZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PagesWithNavigation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.metiax.PagesWithNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
