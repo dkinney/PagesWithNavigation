@@ -1,0 +1,37 @@
+2019-10-31 19:57:25.926805-0400 PagesWithNavigation[3180:168089] *** Assertion failure in -[UINavigationController popToViewController:transition:], /BuildRoot/Library/Caches/com.apple.xbs/Sources/UIKitCore_Sim/UIKit-3900.12.15/UINavigationController.m:8129
+2019-10-31 19:57:25.934604-0400 PagesWithNavigation[3180:168089] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'Tried to pop to a view controller that doesn't exist.'
+*** First throw call stack:
+(
+    0   CoreFoundation                      0x00007fff23c4f02e __exceptionPreprocess + 350
+    1   libobjc.A.dylib                     0x00007fff50b97b20 objc_exception_throw + 48
+    2   CoreFoundation                      0x00007fff23c4eda8 +[NSException raise:format:arguments:] + 88
+    3   Foundation                          0x00007fff256c9b61 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 191
+    4   UIKitCore                           0x00007fff4713d9d1 __57-[UINavigationController popToViewController:transition:]_block_invoke + 620
+    5   UIKitCore                           0x00007fff4713d67e -[UINavigationController popToViewController:transition:] + 753
+    6   SwiftUI                             0x00007fff2c1107bd $s7SwiftUI21UIKitNavigationBridgeC3pop33_F345616596EA75D1F4200D7666E5E588LL8animatedySb_tF + 413
+    7   SwiftUI                             0x00007fff2c10fa83 $s7SwiftUI21UIKitNavigationBridgeC20preferencesDidChangeyyAA14PreferenceListVF + 1267
+    8   SwiftUI                             0x00007fff2c09b8fd $s7SwiftUI14_UIHostingViewC20preferencesDidChangeyyF + 477
+    9   SwiftUI                             0x00007fff2c19a5bd $s7SwiftUI9ViewGraphC13updateOutputs2atyAA4TimeV_tF + 221
+    10  SwiftUI                             0x00007fff2c4ed609 $s7SwiftUI16ViewRendererHostPAAE6render8interval17updateDisplayListySd_SbtFyyXEfU_yyXEfU_ + 1001
+    11  SwiftUI                             0x00007fff2c4ed01a $s7SwiftUI16ViewRendererHostPAAE6render8interval17updateDisplayListySd_SbtFyyXEfU_ + 634
+    12  SwiftUI                             0x00007fff2c4e1074 $s7SwiftUI16ViewRendererHostPAAE6render8interval17updateDisplayListySd_SbtF + 436
+    13  SwiftUI                             0x00007fff2c67ce22 $s7SwiftUI14_UIHostingViewC14layoutSubviewsyyF + 226
+    14  SwiftUI                             0x00007fff2c67ce45 $s7SwiftUI14_UIHostingViewC14layoutSubviewsyyFTo + 21
+    15  UIKitCore                           0x00007fff47d34cfd -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 2478
+    16  QuartzCore                          0x00007fff2b138d41 -[CALayer layoutSublayers] + 255
+    17  QuartzCore                          0x00007fff2b13ef33 _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 517
+    18  QuartzCore                          0x00007fff2b14a86a _ZN2CA5Layer28layout_and_display_if_neededEPNS_11TransactionE + 80
+    19  QuartzCore                          0x00007fff2b0917c8 _ZN2CA7Context18commit_transactionEPNS_11TransactionEd + 324
+    20  QuartzCore                          0x00007fff2b0c6ad1 _ZN2CA11Transaction6commitEv + 643
+    21  QuartzCore                          0x00007fff2b0c743a _ZN2CA11Transaction17observer_callbackEP19__CFRunLoopObservermPv + 76
+    22  CoreFoundation                      0x00007fff23bb1617 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 23
+    23  CoreFoundation                      0x00007fff23bac0ae __CFRunLoopDoObservers + 430
+    24  CoreFoundation                      0x00007fff23bac72a __CFRunLoopRun + 1514
+    25  CoreFoundation                      0x00007fff23babe16 CFRunLoopRunSpecific + 438
+    26  GraphicsServices                    0x00007fff38438bb0 GSEventRunModal + 65
+    27  UIKitCore                           0x00007fff4784fb68 UIApplicationMain + 1621
+    28  PagesWithNavigation                 0x000000010c861ffb main + 75
+    29  libdyld.dylib                       0x00007fff51a1dc25 start + 1
+    30  ???                                 0x0000000000000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
