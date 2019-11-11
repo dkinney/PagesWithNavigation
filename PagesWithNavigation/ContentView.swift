@@ -8,15 +8,17 @@
 
 import SwiftUI
 
+struct TestDestination: View {
+    var body: some View {
+        Text("When you navigate BACK from this link, there is a crash in iOS 13.2 (but not in 13.1.2)")
+            .padding()
+    }
+}
+
 struct TestContent: View {
     var body: some View {
-        NavigationLink (destination:
-            Text("When you navigate BACK from this link, there is a crash in iOS 13.2 (but not in 13.1.2)")
-                .padding()
-            
-        ) {
-            Text("Tap me to reproduce problem")
-                .padding()
+        NavigationLink (destination: TestDestination()) {
+            Text("Tap me to reproduce problem").padding()
         }
     }
 }
@@ -33,6 +35,15 @@ struct ContentView: View {
             // The PageViewController class (UIViewControllerRepresentable)
             // was copied over from the SwiftUI tutorial project, WorkingWithUIControls
             PageViewController(controllers: controllers, currentPage: $day)
+            .navigationBarTitle("Repro Case")
+            .navigationBarItems(
+                leading: NavigationLink(destination: TestDestination()) {
+                    Text("This too")
+                },
+                trailing: NavigationLink(destination: TestDestination()) {
+                    Text("And this")
+                }
+            )
         }
     }
 }
